@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="gb2312">
+    <title>绘制渐变</title>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="420" height="300" style="border:1px solid #c3c3c3;">
+    您的浏览器不支持canvas元素.
+    </canvas>
+    <script type="text/javascript">
+      var c=document.getElementById("myCanvas");
+      var cxt=c.getContext("2d");
+      //创建RadialGradient对象--绘制同心圆		
+      var grd=cxt.createRadialGradient(100,100,10,100,100,70);
+      //设定渐变色
+      grd.addColorStop(0,"red");		
+      grd.addColorStop(0.5,"yellow");
+      grd.addColorStop(1,"gray");
+      //指定填充样式为RadialGradient对象
+      cxt.fillStyle=grd;
+      //使用渐变色填充矩形区域
+      cxt.fillRect(20,20,170,150);
+      //创建RadialGradient对象--绘制普通包含关系的圆
+      grd=cxt.createRadialGradient(250,100,10,300,100,70);		
+      grd.addColorStop(0,"red");		
+      grd.addColorStop(0.5,"yellow");
+      grd.addColorStop(1,"gray");
+      //指定填充样式为RadialGradient对象
+      cxt.fillStyle=grd;
+      //使用渐变色填充矩形区域
+      cxt.fillRect(200,20,200,150);	
+      //绘制线性渐变      
+      var grd=cxt.createLinearGradient(10,200,400,240);
+      grd.addColorStop(0,"#ffffff");                              //渐变起点
+      grd.addColorStop(1,"#00ff00");                              //渐变结束点
+      cxt.fillStyle=grd;
+      cxt.fillRect(10,200,400,240);
+    </script>
+  </body>
+</html>

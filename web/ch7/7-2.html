@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+<title> DOM对象转换成jQuery对象</title>
+<script src="js/jquery-3.2.1.min.js" type="text/javascript">
+</script>
+<script>
+$(document).ready(function(){
+	var domObj = document.getElementById("nodep");
+	alert("使用DOM方法获取p节点的内容："+domObj.innerHTML);
+	var $jqueryObj = $(domObj);
+	alert("使用jQuery方法获取p节点的内容："+$jqueryObj.html());
+})
+</script>
+</head>
+<body>
+  <h2>美肤堂经营理念</h2>
+  <p id="nodep">在消费者心中树立起健康良好的品牌形象</p>
+</body>
+</html>

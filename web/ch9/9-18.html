@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<title>jQuery操作下拉框</title>
+<style>
+.first{
+	float:left;
+	font-size:12px;
+}
+.second{
+	padding-left:110px;
+	font-size:12px;
+}
+.sel{
+	width:100px;
+	height:150px;
+}
+.sd{
+	padding-top:10px;
+}
+</style>
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+	$("#add").click(function(){
+		var $options = $("#hobby option:selected");   // 获取左边选中项
+		$options.appendTo("#other");                  // 追加到右边
+	})
+	$("#add_all").click(function(){
+		var $options = $("#hobby option");            // 获取全部选项
+		$options.appendTo("#other");                  // 追加到右边
+	})
+	$("#hobby").dblclick(function(){                  // 鼠标双击事件
+		var $options = $("option:selected",this);     // 获取选中项
+		$options.appendTo("#other");                  // 追加到右边
+	})
+	$("#to_left").click(function(){                   
+		var $options = $("#other option:selected");   // 获取右边选中项
+		$options.appendTo("#hobby");                  // 追加到左边
+	})
+	$("#all_to_left").click(function(){
+		var $options = $("#other option");            // 获取全部选项
+		$options.appendTo("#hobby");                  // 追加到左边
+	})
+	$("#other").dblclick(function(){                  // 鼠标双击事件
+		var $options = $("option:selected",this);     // 获取选中项
+		$options.appendTo("#hobby");                  // 追加到左边
+	})
+})
+</script>
+</head>
+<body>
+<div class="first">
+	<select multiple name="hobby" id="hobby" class="sel">
+		<option value="美白滋养霜">美白滋养霜</option>
+		<option value="美白润体乳">美白润体乳</option>
+		<option value="美白面膜">美白面膜</option>
+		<option value="美白柔肤水">美白柔肤水</option>
+	</select>
+	<div class="sd">
+		<button id="add">添加>></button><br/><br/>
+		<button id="add_all">全部添加>></button>
+	</div>
+</div>
+<div class="second">
+	<select multiple name="other" id="other" class="sel"></select>
+	<div class="sd">
+		<button id="to_left"><<删除</button><br/><br/>
+		<button id="all_to_left"><<全部删除</button>
+	</div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<title>模仿悬停事件</title>
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("p").hover(function(){			//鼠标悬停
+    $("p").css("background-color","yellow");	//段落背景色变为黄色
+  },function(){					//鼠标移开
+    $("p").css("background-color","#ddd");	//段落背景色变恢复为浅灰色
+  });
+});
+</script>
+</head>
+<body>
+<p style="background-color:#ddd">请把鼠标指针移动到这个段落上。</p>
+</body>
+</html>
+
+
+

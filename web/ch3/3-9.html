@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<script language="JavaScript">
+  var timedate= new Date(2018,1,15);
+  //2018年2月16日，注意1代表2月，15代表16日
+  var times="春节";
+  var now = new Date();
+  var date = timedate.getTime() - now.getTime();
+  var time = Math.floor(date / (1000 * 60 * 60 * 24));
+  if (time >= 0)
+    document.write("现在时间是：",now.getHours(),":",now.getMinutes());
+    document.write("<br>今天日期是：",now.getFullYear(),"-",now.getMonth()+1,"-",now.getDate());
+    document.write("<br>现在离2018年"+times+"还有: "+time +"天");
+</script>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

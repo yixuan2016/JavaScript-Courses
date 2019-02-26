@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+<title>使用Video对象自定义视频播放器</title>
+  <body>
+    <div id="videoDiv">
+        <video id="myVideo" controls>
+            <source src="video/movie.mp4" type="video/mp4" />
+            <source src="video/movie.webm" type="video/webm" />
+            <source src="video/movie.ogg" type="video/ogg" />
+            您的浏览器不支持<video />标签
+        </video>
+    </div>    
+    <div id="controlBar" >
+	<input id="videoPlayer" type="button" value="开始播放" />
+        <input id="videoInfo" type="text" disabled style="width:70px"/>
+        <input id="videoVoice" type="button" value="静音" />
+    </div>
+	<script type="text/javascript">
+		var myVideo=document.getElementById("myVideo");
+		var videoPlayer=document.getElementById("videoPlayer");
+		var videoVoice=document.getElementById("videoVoice");
+		var videoInfo=document.getElementById("videoInfo");
+		//播放/暂停按钮
+		videoPlayer.onclick=function(){			
+			if(myVideo.paused){
+				myVideo.play();
+				videoPlayer.value="暂停播放";
+			}else{
+				myVideo.pause();
+				videoPlayer.value="开始播放";
+			}
+		};
+		//视频播放时，播放进度信息同步
+		myVideo.ontimeupdate=function(){			
+			var currentTime=myVideo.currentTime.toFixed(2);
+			var totalTime=myVideo.duration.toFixed(2);
+			videoInfo.value=currentTime+"/"+totalTime;
+
+		};
+		//静音或取消静音
+		videoVoice.onclick=function(){
+			if(!myVideo.muted){
+				videoVoice.value="取消静音";
+				myVideo.muted=true;
+			}else{
+				videoVoice.value="静音";
+				myVideo.muted=false;
+			}
+		};
+	</script>
+  </body>
+</html>

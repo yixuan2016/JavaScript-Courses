@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<title>切换元素的显示状态</title>
+<style>
+#content{
+	border:6px double blue;		/*双线蓝色边框*/
+}
+</style>
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function(){
+    $("div").toggle();
+  });
+});
+</script>
+</head>
+<body>
+  <button type="button">切换显示状态</button><br/><br/>
+  <div id="content">美肤堂化妆品有限公司，是开封家化联合股份有限公司的全资子公司，拥有近8000万的固定注册资产。2018年1月， 美肤堂作为全新概念的现代中草药中高档个人护理品品牌被推向市场，并以其独树一帜的定位，很快在国内化妆品市场崛起，在消费者心中树立起自然、清新、健康良好的品牌形象。
+  </div>
+</body>
+</html>

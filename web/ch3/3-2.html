@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+<title>with语句</title>
+</head>
+<body>
+<script language="javascript">  
+      var date=new Date();  
+      //使用该对象中的方法，都需要用对象名调用
+      var d=date.getFullYear()+"年"+(date.getMonth()+1)+"月"+date.getDate()+"日";//获取年月日
+	 document.write("一般方式显示系统日期："+d+"<br>");   
+     //运用with语句，确定了对象的作用范围，在该范围内，可以直接使用对象中的方法
+     with(date){  
+      var dd=getHours()+"时"+getMinutes()+"分"+getSeconds()+"秒";  
+    } 
+	document.write("使用with语句显示系统时间："+dd); 
+</script>
+</body>
+</html>

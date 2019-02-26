@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<title>使用String对象的方法设置页面中的文本显示</title>
+</head>
+<body>
+<script language="javascript">  
+  var sitelink="美肤堂网站"
+  document.write(sitelink.link("http://wwww.mft.com/")+"<br>");
+  var str1="美肤堂欢迎您";
+  document.write(str1.big()+"<br>");
+  var str2="孙小美";
+  document.write(str2.small()+"<br>");
+  var str3="美肤堂企业文化";
+  document.write(str3.fontcolor("blue")+"<br>");
+  var str4="美肤堂体现了中国文化中追求自然、平衡的精粹，深信清新、天然、健康的美必须发自根源。";
+  document.write(str4.fontsize(2)+"<br>");
+  var str5="2";
+  var str6="一扫而光";
+  document.write("美白系列产品饱含O"+str5.sup()+"和H"+str5.sub()+"O，将身体的毒素"+str6.strike());
+</script>
+</body>
+</html>

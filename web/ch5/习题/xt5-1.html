@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<title>实现字体大中小</title> 
+<style type="text/css"> 
+<!-- 
+body {font-size:14px} 
+--> 
+</style> 
+<SCRIPT type=text/javascript> 
+function $(xixi) { 
+return document.getElementById(xixi); 
+} 
+//转换字号 
+function doZoom(size){ 
+if(size==12){ 
+$("contentText").style.fontSize = size + "px"; 
+$("fs12").style.display = ""; 
+$("fs14").style.display = "none"; 
+$("fs16").style.display = "none"; 
+} 
+if(size==14){ 
+$("contentText").style.fontSize = size + "px"; 
+$("fs12").style.display = "none"; 
+$("fs14").style.display = ""; 
+$("fs16").style.display = "none"; 
+} 
+if(size==16){ 
+$("contentText").style.fontSize = size + "px"; 
+$("fs12").style.display = "none"; 
+$("fs14").style.display = "none"; 
+$("fs16").style.display = ""; 
+} 
+} 
+</SCRIPT> 
+</head> 
+<body> 
+<DIV class=fontSize id=fs12 style="DISPLAY: none"><A 
+href="javascript:doZoom(16)">大</A> <A 
+href="javascript:doZoom(14)">中</A> <SPAN>小</SPAN></DIV> 
+<DIV class=fontSize id=fs14><A 
+href="javascript:doZoom(16)">大</A> <SPAN>中</SPAN> <A 
+href="javascript:doZoom(12)">小</A></DIV> 
+<DIV class=fontSize id=fs16 style="DISPLAY: none"><SPAN>大</SPAN> <A 
+href="javascript:doZoom(14)">中</A> <A 
+href="javascript:doZoom(12)">小</A></DIV> 
+ 
+<DIV id=contentText><p>2018年1月10日，现代中草药个人护理专家——美肤堂首家体验型专卖店于开封万达广场全新揭幕。店内一系列特有的增值服务和贴心的体验环境，从空间打造到功能布局，完美诠释养美新体验。开封市有关领导和各界知名人士应邀出席，一同为美肤堂万达广场旗舰店揭幕剪彩，见证品牌又一次全新绽放。
+通过对于体验型专卖店的空间打造，重新梳理了东方美学所传达的价值观。在文化复兴的时代，化妆品作为先驱者，将东方文化与品牌空间完美融合在一起。东方美学不仅是视觉体验，更体现了一种关怀：对人的尊重，对自然的敬畏。从空间材料到产品，都渗透着设计师对东方美学及人文的熟练驾驭，是一种全新的商业整合方式。体验型专卖店的设计完全摒弃了表面化的装饰符号，令众人宛若漫步在园林空间之中，体验不同于西方的单纯空间，找寻到东方文化的意义。简单的一抹青苔绿、一处不经意的留白、一帘原浆纸……无不深刻展示了品牌对于东方美学价值的继承理念：客观物质总有其利用价值，就是看起来毫无用处的事物，也可以化无用为有用。</p>
+
+</DIV> 
+</body> 
+</html> 

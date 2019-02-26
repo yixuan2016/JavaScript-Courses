@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <title>自定义对象-构造函数方式</title>
+  </head>
+  <body>
+	<script type="text/javascript">
+		//创建构造函数
+		function Goods(name,type,price,color){
+			this.name=name;
+			this.type=type;
+			this.price=price;
+			this.color=color;
+			this.showInfo=function(){
+				document.write("商品名称："+this.name+" | 商品类型："+this.type+" | 商品价格："+this.price+" | 商品颜色："+this.color+"<br>");
+			};
+			this.showColor=showColor;
+			function showColor(){
+				document.write("商品颜色："+this.color);	
+			}
+		}	
+		//创建对象实例
+		var goods1=new Goods("美白日霜","美白系列化妆品",120,"绿色");
+		var goods2=new Goods("美白柔肤水","滋养系列化妆品",100,"白色");
+		//方法的调用
+		goods1.showInfo();
+		goods2.showColor();
+	</script> 
+   </body>
+</html>
+
+
+
+
+
+
+
+
+
+

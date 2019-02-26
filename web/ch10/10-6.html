@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<title>使用unbind()方法移除页面中的事件绑定</title>
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("p").click(function(){
+    $(this).slideToggle();
+  });
+  $("button").click(function(){
+    $("p").unbind();
+  });
+});
+</script>
+</head>
+<body>
+  <p>这是一个段落。</p>
+  <p>这是另一个段落。</p>
+  <p>点击任何段落可以令其消失。包括本段落。</p>
+  <button>删除 p 元素的事件处理器</button>
+</body>
+</html>
+
+

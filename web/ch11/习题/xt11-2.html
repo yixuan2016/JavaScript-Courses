@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<title>翻滚的消息动态</title>
+<style type="text/css">   
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+	color: #333333;
+}
+.list,li{
+	margin:0;
+}   
+.scroll{
+ 	margin-left:10px;
+  	margin-top:10px; 
+  	width:270px; 
+  	height:120px; 
+  	overflow:hidden;
+}   
+.scroll li{ 
+	width:270px; 
+	height:30px; 
+	line-height:30px; 
+	margin-left:26px;
+}   
+.scroll li a{
+ 	font-size:14px;
+ 	color:#333; 
+ 	text-decoration:none;
+}   
+.scroll li a:hover{
+ 	color:#66CCFF;
+}  
+</style> 
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+</head>
+<body>
+<table width="270" border="0" cellpadding="0" cellspacing="0" style="margin-left:12px;">
+	<tr><td align="left" height="50" style="font-size:22px;" valign="bottom">新闻中心</td></tr>
+</table>
+<div class="scroll">   
+	<ul class="list">   
+ 		<li><a href="#">美肤堂新品即将上市</a></li>   
+		<li><a href="#">美肤理念正在打破人们的生活习惯</a></li>   
+		<li><a href="#">美肤堂论坛今日在会展中心开幕</a></li>  
+		<li><a href="#">美肤堂未来的发展前景</a></li>   
+		<li><a href="#">美肤堂推介会即将开幕</a></li> 
+	</ul>   
+</div>
+<script type="text/javascript"> 
+$(document).ready(function(){
+	$(".scroll").hover(function(){//鼠标指向滚动区域
+		clearTimeout(timeID);//中止超时，即停止滚动
+	},function(){//鼠标离开滚动区域
+		timeID=setInterval('autoScroll()',3000);   //设置超时函数，每过3秒执行一次函数
+	});
+});
+function autoScroll(){   
+	$(".scroll").find(".list").animate({   //自定义动画效果
+ 		marginTop : "-25px"   
+	},500,function(){   
+		$(this).css({"margin-top" : "0px"}).find("li:first").appendTo(this);   //把列表第一行内容移动到列表最后
+	})   
+}   
+var timeID=setInterval('autoScroll()',3000);   //设置超时函数，每过3秒执行一次函数
+
+
+</script> 
+</body>
+</html>

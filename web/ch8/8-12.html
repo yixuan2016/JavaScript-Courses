@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<title>表单选择器</title>
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <style type="text/css">
+		*{margin-top:5px;}
+		div{height:230px; }
+		#formDiv{float:left;padding:4px; width:550px;border:1px solid #666;}
+		#showResult{float:right;padding:4px; width:200px; border:1px solid #666;}
+	</style>
+  </head>
+  <body>
+  <div id="formDiv">
+	<form id="myform" action="#">
+    	账　号：<input type="text" /><br />
+        用户名：<input type="text" name="userName" /><br />
+        密　码：<input type="password" name="userPwd"/><br />
+        爱　好：<input type="radio" name="hobby" value="音乐"/>音乐
+        <input type="radio" name="hobby" value="舞蹈"/>舞蹈
+        <input type="radio" name="hobby" value="足球"/>足球
+        <input type="radio" name="hobby" value="游戏"/>游戏<br />
+        资料上传：<input type="file" /><br />
+        热销产品：<input type="checkbox" name="goodsType" value="美白滋养霜" checked />美白滋养霜
+        <input type="checkbox" name="goodsType" value="美白润体乳" />美白润体乳
+        <input type="checkbox" name="goodsType" value="美白面膜" checked/>美白面膜
+        <input type="checkbox" name="goodsType" value="美白柔肤水" />美白柔肤水<br/>
+        <input type="submit" value="提交" />
+        <input type="button" value="重置" /><br />
+     </form>
+    </div>
+    <div id="showResult"></div>
+	<script type="text/javascript">
+		$(function(e){
+			var result="统计结果如下：<hr/>";
+			result+="<br />&lt;input&gt;标签的数量为："+$(":input").length;
+			result+="<br />单行文本框的数量为："+$(":text").length;
+			result+="<br />密码框的数量为："+$(":password").length;
+			result+="<br />单选按钮的数量为："+$(":radio").length;
+			result+="<br />上传文本域的数量为："+$(":file").length;
+			result+="<br />复选框的数量为："+$(":checkbox").length;
+			result+="<br />提交按钮的数量为："+$(":submit").length;
+			result+="<br />普通按钮的数量为："+$(":button").length;
+			$("#showResult").html(result);
+		});
+	</script>
+  </body>
+</html>

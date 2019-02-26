@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<title>内容过滤器设置表格样式</title>
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+</head>
+<body>
+	<div>
+        <table>
+            <tr><td>商品名</td><td>商品价格</td><td>商品数量</td></tr>
+            <tr><td>美白滋养霜</td><td>120</td><td>100</td></tr>
+            <tr><td>美白润体乳</td><td>80</td><td></td></tr>
+            <tr><td>美白面膜</td><td><span>68</span></td><td>40</td></tr>
+            <tr><td>美白柔肤水</td><td>100</td><td>200</td></tr>
+            <tr><td>美白日霜</td><td><span>60</span></td><td>300</td></tr>
+            <tr><td>美白眼膜</td><td>98</td><td></td></tr>
+            <tr><td colspan="3">共计6种商品</td></tr>
+        </table>
+    </div>
+	<script type="text/javascript">
+		$(function(e){
+			$("td:contains('膜')").css("color","red");	
+			$("td:parent").css("background-color","#ddd");
+			$("td:empty").css("background-color","white");
+			$("td").has('span').css("background-color","yellow");
+		});
+	</script>
+  </body>
+</html>

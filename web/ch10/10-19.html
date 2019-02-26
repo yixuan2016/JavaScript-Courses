@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<title>美肤堂产品系列导航菜单</title>
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".menubar").mouseover(function(){//当鼠标移到元素上时
+			$(this).find(".menu").show();//显示当前的子菜单
+		}).mouseout(function(){		//当鼠标移出元素时
+			$(this).find(".menu").hide();//将该子菜单隐藏
+		});
+	});
+</script>
+<style type="text/css">
+.menubar{
+	position:absolute;
+	top:10px;
+	width:130px;
+	height:20px;
+	cursor:default;
+	border-width:1px;
+	border-style:outset;
+	color:#99FFFF;
+	background:#669900
+}
+.menu{
+	top:32px;
+	width:100px;
+	display:none;
+	border-width:2px;
+	border-style:outset;
+	border-color:white sliver sliver white;
+	background:#669900;
+	padding:5px
+}
+.menu a{
+	text-decoration:none;
+	color:#99FFFF;
+}
+.menu a:hover{
+	color: #FFFFFF;
+}
+</style>
+</head>
+<body>
+<table width="400" border="0" align="center" cellpadding="0" cellspacing="0" style="font-size:15px">
+	<tr>
+		<td width="30%">
+			<div align="center" id="Tdiv_1" class="menubar">
+				<div class="header">美白系列</div>
+				<div align="left" id="Div1" class="menu">
+					<a href="#">美白一号</a><br>
+					<a href="#">美白二号</a><br>
+					<a href="#">美白三号</a>
+				</div>
+			</div>
+		</td>
+		<td width="30%">
+			<div align="center" id="Tdiv_2" class="menubar">
+				<div class="header">滋养系列</div>
+				<div align="left" id="Div2" class="menu">
+					<a href="#">滋养一号</a><br>
+					<a href="#">滋养二号</a><br>
+					<a href="#">滋养三号</a>
+				</div>
+			</div>
+		</td>
+		<td width="30%">
+			<div align="center" id="Tdiv_3" class="menubar">
+				<div class="header">清新系列</div>
+				<div align="left" id="Div3" class="menu">
+					<a href="#">清新一号</a><br>
+					<a href="#">清新二号</a><br>
+					<a href="#">清新三号</a>
+				</div>
+			</div>
+		</td>
+	</tr>
+</table>
+</body>
+</html>
+

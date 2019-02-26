@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<title>创建节点</title>
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+   $(document).ready(function(){
+//创建第1个p元素，包含元素节点和文本节点和属性节点，“title='美肤堂'”就是属性节点
+var $p_1 = $("<p title='美肤堂'>美肤堂</p>");
+//创建第2个p元素，包含元素节点和文本节点和属性节点，“title='新闻中心'”就是属性节点
+var $p_2 = $("<p title='新闻中心'>新闻中心</p>");
+$("div").append($p_1);		// 将第1个p元素添加到div中，使它能在页面中显示
+$("div").append($p_2);		// 将第2个p元素添加到div中，使它能在页面中显示
+
+   });
+</script>
+</head>
+<body>
+<div>
+</div>
+</body>
+</html>

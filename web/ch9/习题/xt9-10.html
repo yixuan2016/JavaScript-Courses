@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<title>操作样式</title>
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <style type="text/css">
+		.baseClass{background-color:#DDD;}
+		.focusClass{background-color:#FFF; border:2px dotted #FF0000;}
+		.inverseColor{color:#FFF;background-color:#000;}
+	</style>
+  </head>
+  <body>
+    <img src="images/02.jpg"/><hr />
+    <input type="button" value="放大图片"  onClick="enlargeImage()"/>
+    <input type="button" value="缩小图片"  onClick="lessenImage()"/>
+	<script type="text/javascript">
+		function enlargeImage(){
+			//alert($("img").css("width"));
+			$("img").css({
+			  width: function(index, value) {
+				return parseFloat(value) * 1.1;
+			  }, 
+			  height: function(index, value) {
+				return parseFloat(value) * 1.1;
+			  }
+			});
+		}
+		function lessenImage(){
+			$("img").css({
+			  width: function(index, value) {
+				return parseFloat(value) * 0.9;
+			  }, 
+			  height: function(index, value) {
+				return parseFloat(value) * 0.9;
+			  }
+			});
+		}
+	</script>
+  </body>
+</html>

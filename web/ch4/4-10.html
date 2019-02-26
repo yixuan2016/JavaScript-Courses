@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<title>检查表单</title>
+<script language="JavaScript">
+  function check() {
+    var va1=document.chform.textname.value;    // 表单名.文本框名.value
+    if("a"<va1 && va1<"z")
+      return(true);
+    else {
+      alert("输入值"+va1+"超出了允许的范围!");
+      return(false);}
+  }
+</script>
+</head>
+<body>
+  <form name="chform" method="post" onSubmit="check()">
+    <p>输入一个a到z之间的字母(a,z除外)：
+    <input type="text" name="textname" value="a" size="10"></p>
+    <input type="submit">
+  </form>
+</body>
+</html>

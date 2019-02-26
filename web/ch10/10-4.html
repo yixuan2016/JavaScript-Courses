@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+<title>delegate()方法绑定事件</title>
+<style>
+p{background:yellow; font-weight:bold; cursor:pointer;padding:5px;}
+</style>
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("body").delegate("p", "click", function(){
+      $(this).after("<p>这是一个新段落!</p>");
+    });
+});
+</script>
+</head>
+<body>
+  <p>单击我!</p>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="gb2312">
+<title>简单纯js实现网页tab选项卡切换效果</title>
+<style>
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+}
+ul,li{
+	list-style:none;
+}
+#tab{
+	position:relative;
+	margin-left:20px;
+	margin-top:20px
+}
+#tab .tabList ul li{
+	float:left;
+	background:#fefefe;
+	border:1px solid #ccc;
+	padding:5px 0;
+	width:100px;
+	text-align:center;
+	margin-left:-1px;
+	position:relative;
+	cursor:pointer;
+}
+#tab .tabCon{
+	position:absolute;
+	left:-1px;
+	top:32px;
+	border:1px solid #ccc;
+	border-top:none;
+	width:450px;
+	height:auto;
+}
+#tab .tabCon div{
+	padding:10px;
+	position:absolute;
+	opacity:0;
+}
+#tab .tabList li.cur{
+	border-bottom:none;
+	background:#fff;
+}
+#tab .tabCon div.cur{
+	opacity:1;
+}
+</style>
+</head>
+<body>
+<div id="tab">
+  <div class="tabList">
+	<ul>
+		<li class="cur">关于我们</li>
+		<li>联系我们</li>
+	</ul>
+  </div>
+  <div class="tabCon">
+	<div class="cur">
+      <p>美肤堂化妆品有限公司，是开封家化联合股份有限公司的全资子公司，拥有近8000万的固定注册资产。 </p> 
+      <p>2018年1月，美肤堂作为全新概念的现代中草药中高档个人护理品品牌被推向市场，并以其独树一帜在定位，很快在国内化妆品市场崛起，在消费者心中树立起自然、清新、健康良好的品牌形象。</p>
+    </div>
+	<div> 
+      <p><strong>美肤堂客服中心</strong></p> 
+      <p>地址：开封市经济技术开发区第一大街</p>
+      <p>电话: 13837862222</p>
+      <p>email: sxm@163.com</p><br/>
+      <p><strong>销售中心</strong></p> 
+      <p>电话:13912345678</p> 
+      <p>email: kitty@163.com</p><br/>
+      <p><strong>市场 & 广告部</strong></p> 
+      <p>电话: 13712345678 </p> 
+      <p>email: qfr@163.com</p>
+
+    </div>
+  </div>
+</div>
+<script>
+window.onload = function() {
+    var oDiv = document.getElementById("tab");
+    var oLi = oDiv.getElementsByTagName("div")[0].getElementsByTagName("li");
+    var aCon = oDiv.getElementsByTagName("div")[1].getElementsByTagName("div");
+    var timer = null;
+    for (var i = 0; i < oLi.length; i++) {
+        oLi[i].index = i;
+        oLi[i].onmouseover = function() {
+            show(this.index);
+        }
+    }
+    function show(a) {
+        index = a;
+        var alpha = 0;
+        for (var j = 0; j < oLi.length; j++) {
+            oLi[j].className = "";
+            aCon[j].className = "";
+            aCon[j].style.opacity = 0;
+            aCon[j].style.filter = "alpha(opacity=0)";
+        }
+        oLi[index].className = "cur";
+        clearInterval(timer);
+        timer = setInterval(function() {
+            alpha += 2;
+            alpha > 100 && (alpha = 100);
+            aCon[index].style.opacity = alpha / 100;
+            aCon[index].style.filter = "alpha(opacity=" + alpha + ")";
+            alpha == 100 && clearInterval(timer);
+        })
+    }
+}
+</script>
+</body>
+</html>

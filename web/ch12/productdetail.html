@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312" />
+<title>产品明细</title>
+<link href="css/base.css" type="text/css" rel="stylesheet" />
+<link href="css/productdetail.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery.js"></script>
+<link rel="stylesheet" href="js/jquery-ui-1.12.1.custom/jquery-ui.css" />
+<script src="js/jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+<script src="js/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+<style>
+  .ui-autocomplete {
+    max-height: 100px;		/* 菜单最大高度100px，超出高度时出现垂直滚动条 */
+    overflow-y: auto;		/* 垂直滚动条自动适应 */
+    overflow-x: hidden;    /* 防止水平滚动条 */
+  }
+  #search_div{width:78px; height:25px; line-height:25px; text-align:center; background:#58594d; color:#FFFFFF; float:left; position:relative; z-index:1;}
+</style>
+<script>
+  $(function() {
+    var datas = [
+      "美肤常识",
+      "美肤科技",
+      "美肤会展",
+      "美肤画廊",
+      "美肤社区",
+      "美肤杂志",
+      "美肤网站",
+      "美肤交流",
+      "美肤空间",
+      "美肤博客"
+    ];
+    $( "#tags" ).autocomplete({
+      source: datas
+    });
+  });
+</script>
+</head>
+
+<body>
+<div class="banner">
+        <!--头部-->
+        <div class="top">
+        	<div class="logo"></div>
+            <span></span>       
+            <div class="txt01">
+                <p>专注护肤行业<b>15年</b></p>
+                <p>我们只生产最高品质的护肤产品</p>
+            </div>
+            <div class="tel">
+                <b>热线:400-111-8888</b>
+            </div>            
+        </div> 
+        <div class="nav">
+        	<div class="nav_bg">
+            	<ul>
+                	<li><a href="index.html">首页</a></li>
+                    <li><span></span><a href="news.html">公司新闻</a></li>
+                    <li class="ff"><span></span><a href="product.html">产品中心</a></li>
+                    <li><span></span><a href="company.html">公司理念</a></li>
+                    <li><span></span><a href="contact.html">联系我们</a></li>
+                </ul>
+                <div class="search">
+                	<div class="ui-widget" id="search_div">产品搜索</div>
+                    <input id="tags" type="text" class="s02" /><span></span>
+                </div>
+            </div>
+        </div>
+	</div>
+    <div class="main">
+    	<h2>当前位置：首页>产品中心</h2>
+        <div class="left">
+        	<div class="title"><span></span>产品中心</div>
+            <ul>
+            	<li><a href="#">面膜系列</a></li>
+                <li class="curr"><a href="#">太极养美系列</a></li>
+                <li><a href="#">新美白系列</a></li>
+            </ul>
+            <div class="ad">
+            	<div class="s01"><span></span><p>客服中心</p><span></span></div>
+                <div class="s03"><p>电话：400-111-8888</p><p>地址：开封市经济技术开发区第一大街12号</p></div>
+            </div>
+            <div class="tel">
+            	<div class="box01"><span>服务热线</span><i></i><p>400-111-8888</p></div>
+            </div>
+            <div class="yin"><img src="images/yin01.png" /> </div>
+        </div>
+        <div class="right" id="center">
+        	<div class="title">
+        	  <p class="curr"><a href="javascript:">新美白系列</a></p><p><a href="javascript:">滋养产品</a></p></div>
+            <div class="line"><b></b><i></i></div>
+            <div class="set01">
+            <div class="box01">
+            	<b><img src="images/product06.jpg" style="border:solid 1px #d2e0ce" /></b>
+                <span>产品名称：新美白滋养霜</br>系　　列：新美白系列</br>加倍莹润并呵护肌肤，令肌肤润白细腻</span>
+            </div>
+            <div class="txt">
+            	<p>升级新美白滋养霜,有效淡化黑眼圈，均匀美白眼周肌肤加倍莹润并呵护肌肤，令肌肤润白细腻,蕴含白芍、白蔹、白芨、白蒺藜等七种中草药萃集而成的&ldquo;新美白滋养霜&rdquo;，质地醇厚细腻，幼滑丰润，有效修护肤色不均，加倍莹润并呵护肌肤，令肌肤润白细腻，水嫩透亮。升级新美白滋养霜，柔化肌肤角质层，供给肌肤所需水分与养份。新美白滋养霜，给于肌肤特润嫩白的加倍呵护。新美白滋养霜，促进眼周肌肤循环，有效消减眼袋及幼纹，淡化黑眼圈。新美白滋养霜，持续使用，有效嫩白身体肌肤。</p>
+	        	<p>升级新美白滋养霜,有效淡化黑眼圈，均匀美白眼周肌肤加倍莹润并呵护肌肤，令肌肤润白细腻,蕴含白芍、白蔹、白芨、白蒺藜等七种中草药萃集而成的&ldquo;新美白滋养霜&rdquo;，质地醇厚细腻，幼滑丰润，有效修护肤色不均，加倍莹润并呵护肌肤，令肌肤润白细腻，水嫩透亮。升级新美白滋养霜，柔化肌肤角质层，供给肌肤所需水分与养份。新美白滋养霜，给于肌肤特润嫩白的加倍呵护。新美白滋养霜，促进眼周肌肤循环，有效消减眼袋及幼纹，淡化黑眼圈。新美白滋养霜，持续使用，有效嫩白身体肌肤。</p>			     
+            </div>        
+            <h3>关联产品</h3>
+            <div class="box02" id="display">
+                <ul>
+                	<li><img src="images/product001.jpg" style="border:solid 1px #d2e0ce" /><br/><span>新美白日霜</span></li>
+                    <li><img src="images/product002.jpg" style="border:solid 1px #d2e0ce" /><br/><span>新美白润体乳</span></li>
+                    <li><img src="images/product003.jpg" style="border:solid 1px #d2e0ce" /><br/><span>新美白嫩肤眼膜</span></li>
+                    <li><img src="images/product004.jpg" style="border:solid 1px #d2e0ce" /><br/><span>新美白柔肤水</span></li>
+                    
+                    <li><img src="images/product005.png" style="border:solid 1px #d2e0ce" /><br/><span>新美白润体乳</span></li>
+                    <li><img src="images/product002.jpg" style="border:solid 1px #d2e0ce" /><br/><span>新美白嫩肤眼膜</span></li>
+                    <li><img src="images/product003.jpg" style="border:solid 1px #d2e0ce" /><br/><span>新美白柔肤水</span></li>
+                    <li><img src="images/product008.png" style="border:solid 1px #d2e0ce" /><br/><span>新美白日霜</span></li>
+                    
+                    <li><img src="images/product009.png" style="border:solid 1px #d2e0ce" /><br/><span>新美白润体乳</span></li>
+                    <li><img src="images/product002.jpg" style="border:solid 1px #d2e0ce" /><br/><span>新美白嫩肤眼膜</span></li>
+                    <li><img src="images/product003.jpg" style="border:solid 1px #d2e0ce" /><br/><span>新美白柔肤水</span></li>
+                    <li><img src="images/product012.png" style="border:solid 1px #d2e0ce" /><br/><span>新美白润体乳</span></li>
+                </ul>
+            <div class="prev"><a href="javascript:"></a></div>
+            <div class="next"><a href="javascript:"></a></div>
+        	</div>
+            </div>
+             <div class="set02">
+            <div class="box01">
+            	<b><img src="images/product07.jpg" style="border:solid 1px #d2e0ce" /></b>
+                <span>产品名称：新美白柔肤水</br>系　　列：滋养系列</br>加倍莹润并呵护肌肤，令肌肤润白细腻</span>
+            </div>
+            <div class="txt">
+            	<p>升级新美白柔肤水,有效淡化黑眼圈，均匀美白眼周肌肤加倍莹润并呵护肌肤，令肌肤润白细腻,蕴含白芍、白蔹、白芨、白蒺藜等七种中草药萃集而成的&ldquo;新美白柔肤水&rdquo;，质地醇厚细腻，幼滑丰润，有效修护肤色不均，加倍莹润并呵护肌肤，令肌肤润白细腻，水嫩透亮。升级新美白柔肤水，柔化肌肤角质层，供给肌肤所需水分与养份。新美白柔肤水，给于肌肤特润嫩白的加倍呵护。新美白柔肤水，促进眼周肌肤循环，有效消减眼袋及幼纹，淡化黑眼圈。新美白柔肤水，持续使用，有效嫩白身体肌肤。</p>
+	        	<p>升级新美白柔肤水,有效淡化黑眼圈，均匀美白眼周肌肤加倍莹润并呵护肌肤，令肌肤润白细腻,蕴含白芍、白蔹、白芨、白蒺藜等七种中草药萃集而成的&ldquo;新美白柔肤水&rdquo;，质地醇厚细腻，幼滑丰润，有效修护肤色不均，加倍莹润并呵护肌肤，令肌肤润白细腻，水嫩透亮。升级新美白柔肤水，柔化肌肤角质层，供给肌肤所需水分与养份。新美白柔肤水，给于肌肤特润嫩白的加倍呵护。新美白柔肤水，促进眼周肌肤循环，有效消减眼袋及幼纹，淡化黑眼圈。新美白柔肤水，持续使用，有效嫩白身体肌肤。</p>	
+            </div>            
+            <h3>关联产品</h3>
+            <div class="box02" id="display">
+                <ul>
+                	<li><img src="images/product001.jpg" style="border:solid 1px #d2e0ce" /><br/><span>新美白日霜</span></li>
+                    <li><img src="images/product002.jpg" style="border:solid 1px #d2e0ce" /><br/><span>新美白润体乳</span></li>
+                    <li><img src="images/product003.jpg" style="border:solid 1px #d2e0ce" /><br/><span>新美白嫩肤眼膜</span></li>
+                    <li><img src="images/product004.jpg" style="border:solid 1px #d2e0ce" /><br/><span>新美白柔肤水</span></li>
+                    
+                    <li><img src="images/product005.png" style="border:solid 1px #d2e0ce" /><br/><span>新美白润体乳</span></li>
+                    <li><img src="images/product002.jpg" style="border:solid 1px #d2e0ce" /><br/><span>新美白嫩肤眼膜</span></li>
+                    <li><img src="images/product003.jpg" style="border:solid 1px #d2e0ce" /><br/><span>新美白柔肤水</span></li>
+                    <li><img src="images/product008.png" style="border:solid 1px #d2e0ce" /><br/><span>新美白日霜</span></li>
+                    
+                    <li><img src="images/product009.png" style="border:solid 1px #d2e0ce" /><br/><span>新美白润体乳</span></li>
+                    <li><img src="images/product002.jpg" style="border:solid 1px #d2e0ce" /><br/><span>新美白嫩肤眼膜</span></li>
+                    <li><img src="images/product003.jpg" style="border:solid 1px #d2e0ce" /><br/><span>新美白柔肤水</span></li>
+                    <li><img src="images/product012.png" style="border:solid 1px #d2e0ce" /><br/><span>新美白润体乳</span></li>
+                </ul>
+              <div class="prev"><a href="javascript:"></a></div>
+              <div class="next"><a href="javascript:"></a></div>
+        	</div>
+            </div>
+        </div>
+    </div>
+    
+	
+<!--底部-->    
+    <div class="bottom">
+    	<div class="bb">
+                <ul>
+                	<li><a href="index.html">首页</a></li>
+                    <li><span></span><a href="news.html">公司新闻</a></li>
+                    <li><span></span><a href="product.html">产品中心</a></li>
+                    <li><span></span><a href="company.html">公司理念</a></li>
+                    <li><span></span><a href="contact.html">联系我们</a></li>
+                </ul>
+        </div>
+        <p>Copyright &copy; 美肤堂化妆品有限公司 ICP备11118888</p>
+    </div>
+</body>
+<script src="js/js.js"></script>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<title>使用keydown()方法和keyup()方法示例</title>
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("input").keydown(function(){
+    $("input").css("background-color","yellow");//按键按下的keydown事件，文本框变为黄色背景
+  });
+  $("input").keyup(function(){
+    $("input").css("background-color","red");	//按键松开的keyup事件，文本框变为红色背景
+  });
+});
+</script>
+</head>
+<body>
+  输入您的名字: <input type="text" />
+  <p>当发生按键按下的keydown事件时，文本框会改变颜色；当发生按键被松开的keyup事件时，文本框会再次改变颜色。请输入内容。</p>
+</body>
+</html>

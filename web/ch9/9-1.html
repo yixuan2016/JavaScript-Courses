@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<title>修改页面元素的属性</title>
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+</head>
+  <body>
+        <img id="prod1" src="images/01.jpg"/>
+        <img id="prod2" src="images/02.jpg"/><hr/>
+        <input type="button" value="交换产品" onClick="swap()"/><hr/>
+	<input type="checkbox" name="goodsType" value="美白滋养霜" checked />美白滋养霜
+        <input type="checkbox" name="goodsType" value="美白润体乳" />美白润体乳
+        <input type="checkbox" name="goodsType" value="美白面膜"/>美白面膜
+        <input type="checkbox" name="goodsType" value="美白柔肤水" checked/>美白柔肤水<br/><hr/>
+        <input type="button" value="全选" onClick="changeSelect()"/>
+        <input type="button" value="反选" onClick="reverseSelect()"/>
+        <input type="button" value="全部禁用" onClick="disabledSelect()"/>
+        <input type="button" value="取消禁用" onClick="enabledSelect()"/>
+	<script type="text/javascript">
+		function swap(){
+			var prodSrc= $("#prod1").attr("src");
+			$("#prod1").attr("src",function(){ return $("#prod2").attr("src")});
+			$("#prod2").attr("src",prodSrc);
+		}
+		function changeSelect(){
+			$("input[type='checkbox']").prop("checked",true);
+		}
+		function reverseSelect(){
+			$("input[type='checkbox']").prop("checked", function(index, oldValue){return !oldValue;});
+		}
+		function disabledSelect(){
+			$("input[type='checkbox']").prop({disabled: true,checked:true});
+		}
+		function enabledSelect(){
+			$("input[type='checkbox']").removeProp("disabled");
+		}
+	</script>
+  </body>
+</html>

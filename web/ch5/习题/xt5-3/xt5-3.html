@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<title>美肤堂产品展示</title>
+</head>
+<body>
+<table width="660" border="0" align="center">
+  <tr>
+    <td><DIV id=demo style="OVERFLOW: hidden; WIDTH: 660px; COLOR: #ffffff; HEIGHT: 180px">
+            <TABLE cellPadding=0 width=100% align=left border=0 cellspace=0>
+              <TBODY>
+              <TR>
+<!--------------------demo1--------------------->
+              	<TD id=demo1 vAlign=top>
+                  <TABLE cellSpacing=1 cellPadding=1>
+                    <TBODY>
+                    <TR vAlign=top>
+                      <TD vAlign=top noWrap>
+                        <DIV align=right>
+                        <TABLE cellSpacing=0 cellPadding=0 align=center border=0>
+                          <TBODY>
+                          <TR>
+                            <TD align=middle>
+                              <TABLE cellSpacing=0 cellPadding=0 width=200 
+                              align=center border=0>
+                                <TBODY>
+                                <TR>
+                                <TD align=middle height=150>
+                                <A href="#" target=_blank>
+                                <IMG width=200 height=150  src="images/index01.png" border=0>
+                                </A></TD></TR>
+                                <TR>
+                                <TD class=nav1 align=middle height=20>
+                                <A class=apm2 href="#" target=_blank>保健系列
+                               </A></TD></TR></TBODY></TABLE></TD>
+                            <TD align=middle>
+                              <TABLE cellSpacing=0 cellPadding=0 width=200 
+                              align=center border=0>
+                                <TBODY>
+                                <TR>
+                                <TD align=middle height=150>
+                                <A href="#" target=_blank>
+                                <IMG width=200 height=150  src="images/index02.png" border=0>
+                                </A></TD></TR>
+                                <TR>
+                                <TD class=nav1 align=middle height=20>
+                                <A class=apm2 href="#" target=_blank>美白系列
+                                </A></TD></TR></TBODY></TABLE></TD>
+                            <TD align=middle>
+                              <TABLE cellSpacing=0 cellPadding=0 width=200 
+                              align=center border=0>
+                                <TBODY>
+                                <TR>
+                                <TD align=middle height=150>
+                                <A href="#" target=_blank>
+                                <IMG width=200 height=150  src="images/index03.png" border=0>
+                                </A></TD></TR>
+                                <TR>
+                                <TD class=nav1 align=middle height=20>
+                                <A class=apm2 href="#" target=_blank>滋养系列
+                                </A></TD></TR></TBODY></TABLE></TD>
+                            <TD align=middle>
+                              <TABLE cellSpacing=0 cellPadding=0 width=200 
+                              align=center border=0>
+                                <TBODY>
+                                <TR>
+                                <TD align=middle height=150>
+                                <A href="#" target=_blank>
+                                <IMG width=200 height=150  src="images/index04.png" border=0>
+                                </A></TD></TR>
+                                <TR>
+                                <TD class=nav1 align=middle height=20>
+                                <A class=apm2 href="#" target=_blank>清新系列                        
+                                </A></TD></TR></TBODY></TABLE></TD>
+                              </TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE></TD>
+<!-------------------demo2--------------------->
+              	                <TD id=demo2 width="0"></TD>
+			      </TR></TBODY></TABLE>
+           </DIV>
+<!--------------------demo end------------------>
+<SCRIPT>
+var dir=1                 //每步移动像素，大＝快
+var speed=20               //循环周期（毫秒）大＝慢
+demo2.innerHTML=demo1.innerHTML
+function Marquee(){       //正常移动
+	if (dir>0  && (demo2.offsetWidth-demo.scrollLeft)<=0) demo.scrollLeft=0
+	if (dir<0 &&(demo.scrollLeft<=0)) demo.scrollLeft=demo2.offsetWidth
+	demo.scrollLeft+=dir
+	demo.onmouseover=function() {clearInterval(MyMar)}             //暂停移动
+	demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)}  //继续移动
+}
+var MyMar=setInterval(Marquee,speed)
+</SCRIPT> </td>
+  </tr>
+</table>
+</body>
+</html>

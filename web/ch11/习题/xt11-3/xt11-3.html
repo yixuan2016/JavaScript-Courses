@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<title>动画菜单</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" /> 
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+  
+$(document).ready(function (){
+
+	$("ul.menu_body li:even").addClass("alt");  // 设置间隔菜单项的交替背景色
+
+        $('img.menu_head').click(function () {  //单击菜单按钮下拉和收回菜单的功能
+
+	$('ul.menu_body').slideToggle('medium');
+	  
+});
+
+});
+
+</script>
+</head>
+
+<body>
+
+  <img src="images/navigate.png" width="184" height="32" class="menu_head" />
+
+  <ul class="menu_body">
+
+    <li><a href="#">首页</a></li>
+
+    <li><a href="#">新闻中心</a></li>
+
+  
+  <li><a href="#">公司简介</a></li>
+
+    <li><a href="#">产品展示</a></li>
+  
+  <li><a href="#">合作伙伴</a></li>
+
+  
+  <li><a href="#">联系我们</a></li>
+
+    <li><a href="#">会员中心</a></li>
+  
+</ul>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<title>模拟用户的操作触发事件示例</title>
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("input").select(function(){
+    $("input").after("文本被选中！");
+  });
+  $("button").click(function(){
+    $("input").trigger("select");
+  });
+});
+</script>
+</head>
+<body>
+<input type="text" name="comName" value="美肤堂" />
+<br />
+<button>激活input元素的select事件</button>
+</body>
+</html>
+
+

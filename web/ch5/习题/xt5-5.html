@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<title>文字爬楼</title> 
+</head>
+<body> 
+<script language=JavaScript> 
+msg="美肤堂蒸蒸日上" 
+align="center"; 
+speed=250; 
+up=true; 
+spas=" "; 
+for (a=0;a<=12;a++) {spas+=" "} 
+msg=spas+msg+spas; 
+j=eval(-1); 
+stop=msg.length; 
+document.write("<form name='form'><table border=0 cellspacing=0 " 
++"cellpadding=0 align="+align+">"); 
+for (i=1;i<=13;i++) { 
+document.write("<tr><td><input type=text name=\"box"+i+"\" size=2>"); 
+document.write("</td></tr>"); 
+} 
+document.write("</table></form>"); 
+function scrollIt() { 
+j++; 
+with (document.form) { 
+if ((j+12) <= stop) { 
+box1.value = msg.charAt(j); 
+box2.value = msg.charAt(j+1); 
+box3.value = msg.charAt(j+2); 
+box4.value = msg.charAt(j+3); 
+box5.value = msg.charAt(j+4); 
+box6.value = msg.charAt(j+5); 
+box7.value = msg.charAt(j+6); 
+box8.value = msg.charAt(j+7); 
+box9.value = msg.charAt(j+8); 
+box10.value = msg.charAt(j+9); 
+box11.value = msg.charAt(j+10); 
+box12.value = msg.charAt(j+11); 
+box13.value = msg.charAt(j+12); 
+} else { 
+j=0; 
+} 
+} 
+setTimeout("scrollIt()",speed);     
+} 
+scrollIt(); 
+</script> 
+</body> 
+</html>

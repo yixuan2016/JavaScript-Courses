@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<title>在元素外部插入元素的方法</title>
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script>
+ $(document).ready(function(){
+    $("#btnbefore").click(function () {
+       $("img").before("<b>美白</b>");
+    });
+    $("#btnafter").click(function() {
+       $("img").after ("<b>滋养霜</b>");
+    });
+  });
+	</script>
+</head>
+<body>
+   <img src="images/02.jpg"><br><br>
+   <button id="btnbefore">在前面插入内容</button>
+   <button id="btnafter">在后面插入内容</button>
+</body>
+</html>

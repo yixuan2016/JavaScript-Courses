@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+<title>bind()方法禁止网页弹出右键菜单</title>
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){   
+           $(document).bind("contextmenu",function(e){   
+               return false;   
+           });   
+       });
+</script>
+</head>
+<body>
+<p>右键单击网页，不会弹出右键菜单</p>
+</body>
+</html>

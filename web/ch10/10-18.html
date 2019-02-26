@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<title>使用scroll()方法示例</title>
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+x=0;
+$(document).ready(function(){
+  $("div").scroll(function() {
+    $("span").text(x+=1);
+  });
+});
+</script>
+</head>
+<body>
+<p>请试着滚动DIV中的文本：</p>
+<div style="width:200px;height:100px;overflow:scroll;">
+  美肤堂欢迎您美肤堂欢迎您 美肤堂欢迎您 美肤堂欢迎您 美肤堂欢迎您 美肤堂欢迎您
+  <br /><br />
+  美肤堂欢迎您美肤堂欢迎您 美肤堂欢迎您 美肤堂欢迎您 美肤堂欢迎您 美肤堂欢迎您
+</div>
+<p>滚动了<span>0</span>次。</p>
+</body>
+</html>
+
+

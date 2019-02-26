@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312" />
+<title>新闻明细</title>
+<link href="css/base.css" type="text/css" rel="stylesheet" />
+<link href="css/newsdetail.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery.js"></script>
+<script src="js/js.js"></script>
+<link rel="stylesheet" href="js/jquery-ui-1.12.1.custom/jquery-ui.css" />
+<script src="js/jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+<script src="js/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+<style>
+  .ui-autocomplete {
+    max-height: 100px;		/* 菜单最大高度100px，超出高度时出现垂直滚动条 */
+    overflow-y: auto;		/* 垂直滚动条自动适应 */
+    overflow-x: hidden;    /* 防止水平滚动条 */
+  }
+  #search_div{width:78px; height:25px; line-height:25px; text-align:center; background:#58594d; color:#FFFFFF; float:left; position:relative; z-index:1;}
+</style>
+<script>
+  $(function() {
+    var datas = [
+      "美肤常识",
+      "美肤科技",
+      "美肤会展",
+      "美肤画廊",
+      "美肤社区",
+      "美肤杂志",
+      "美肤网站",
+      "美肤交流",
+      "美肤空间",
+      "美肤博客"
+    ];
+    $( "#tags" ).autocomplete({
+      source: datas
+    });
+  });
+</script>
+</head>
+
+<body>
+<div class="banner">
+        <!--头部-->
+        <div class="top">
+        	<div class="logo"></div>
+            <span></span>       
+            <div class="txt01">
+                <p>专注护肤行业<b>15年</b></p>
+                <p>我们只生产最高品质的护肤产品</p>
+            </div>
+            <div class="tel">
+                <b>热线:400-111-8888</b>
+            </div>            
+        </div> 
+        <div class="nav">
+        	<div class="nav_bg">
+            	<ul>
+                	<li><a href="index.html">首页</a></li>
+                    <li class="ff"><span></span><a href="news.html">公司新闻</a></li>
+                    <li><span></span><a href="product.html">产品中心</a></li>
+                    <li><span></span><a href="company.html">公司理念</a></li>
+                    <li><span></span><a href="contact.html">联系我们</a></li>
+                </ul>
+                <div class="search">
+                	<div class="ui-widget" id="search_div">产品搜索</div>
+                    <input id="tags" type="text" class="s02" /><span></span>
+                </div>
+            </div>
+        </div>
+	</div>
+    
+    <div class="main">
+    	<h2>当前位置：首页>公司新闻</h2>
+        <div class="left">
+            <ul>
+            	<li class="curr"><a href="#"><span></span>公司新闻</a></li>
+                <li><a href="#"><span></span>公司荣誉</a></li>
+                <li><a href="#"><span></span>品牌资讯</a></li>
+                <li><a href="#"><span></span>护肤学堂</a></li>
+            </ul>
+            <div class="ad">
+            	<div class="s01"><span></span><p>客服中心</p><span></span></div>
+                <div class="s03"><p>电话：400-111-8888</p><p>地址：开封市经济技术开发区第一大街12号</p></div>
+            </div>
+            <div class="tel">
+            	<div class="box01"><span>服务热线</span><i></i><p>400-111-8888</p></div>
+            </div>
+            <div class="yin"><img src="images/yin01.png" /> </div>
+        </div>        
+        
+        <div class="right"> 
+        	<ul>
+            	<li>以时尚概念沟通 吸引年轻消费者<p>美肤堂现代中草药护理产品采用经典本草，珍珠、人参、黄精、桂花和琥珀，同时结合M3微囊技术，以现代科技焕活千年古方经典，从深层修护肌底，持久缓慢释放到肌肤的不同位置，特别针对问题部位，焕活肌肤，使肌肤达到“紧实、强韧、扶纹”的功效，修护时光痕迹，让肌肤全天候焕发年轻态。
+</p></li>
+				<li>尊崇中国美容经典<p>美肤堂体现了中国文化中追求“自然、平衡”的精粹，深信清新、天然、健康的美必须发自根源。
+美肤堂，是中国第一套完整意义的现代中草药系列护理产品，尊崇中国美容经典，糅合中国特有的草药精华与现代生物科技的最新成果，以整体的新观念带来自然而且有效的发肤护理系列产品，缔造发自根源的美丽。</p></li>
+                
+                <li>打造全新的中草药轻养护方式<p>据悉，结合此档年轻的真人秀节目，美肤堂将以全新上市的菁萃原液面膜全程提供给明星夫妻，以陪伴他们应对旅途中各种极限环境对肌肤的挑战。全新菁萃原液面膜是配合当下都市人生活节奏，全新打造的一种中草药轻养护方式：化繁为简，以超轻透天丝面膜贴，珍贵浸润植物菁萃和活性酵萃精华。</p></li>
+                
+            </ul>
+            <b><img src="images/newsdetail.jpg"/></b>
+        </div>
+    </div>   
+    
+	
+<!--底部-->    
+    <div class="bottom">
+    	<div class="bb">
+                <ul>
+                	<li><a href="index.html">首页</a></li>
+                    <li><span></span><a href="news.html">公司新闻</a></li>
+                    <li><span></span><a href="product.html">产品中心</a></li>
+                    <li><span></span><a href="company.html">公司理念</a></li>
+                    <li><span></span><a href="contact.html">联系我们</a></li>
+                </ul>
+        </div>
+        <p>Copyright &copy; 美肤堂化妆品有限公司 ICP备11118888</p>
+    </div>
+</body>
+</html>

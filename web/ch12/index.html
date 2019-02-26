@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312" />
+<title>美肤堂首页</title>
+<link href="css/index.css" type="text/css" rel="stylesheet" />
+<link href="css/base.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery.js"></script>
+<script src="js/js.js"></script>
+<link rel="stylesheet" href="js/jquery-ui-1.12.1.custom/jquery-ui.css" />
+<script src="js/jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+<script src="js/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+<style>
+  .ui-autocomplete {
+    max-height: 100px;		/* 菜单最大高度100px，超出高度时出现垂直滚动条 */
+    overflow-y: auto;		/* 垂直滚动条自动适应 */
+    overflow-x: hidden;    /* 防止水平滚动条 */
+  }
+  #search_div{width:78px; height:25px; line-height:25px; text-align:center; background:#58594d; color:#FFFFFF; float:left; position:relative; z-index:1;}
+</style>
+<script>
+  $(function() {
+    var datas = [
+      "美肤常识",
+      "美肤科技",
+      "美肤会展",
+      "美肤画廊",
+      "美肤社区",
+      "美肤杂志",
+      "美肤网站",
+      "美肤交流",
+      "美肤空间",
+      "美肤博客"
+    ];
+    $( "#tags" ).autocomplete({
+      source: datas
+    });
+  });
+</script>
+</head>
+<body>
+	<div class="banner">
+        <!--头部-->
+        <div class="top">
+        	<div class="logo"></div>
+            <span></span>       
+            <div class="txt01">
+                <p>专注护肤行业<b>15年</b></p>
+                <p>我们只生产最高品质的护肤产品</p>
+            </div>
+            <div class="tel">
+                <b>热线:400-111-8888</b>
+            </div>            
+        </div> 
+        <div class="nav">
+        	<div class="nav_bg">
+            	<ul>
+                	<li class="ff"><a href="index.html">首页</a></li>
+                    <li><span></span><a href="news.html">公司新闻</a></li>
+                    <li><span></span><a href="product.html">产品中心</a></li>
+                    <li><span></span><a href="company.html">公司理念</a></li>
+                    <li><span></span><a href="contact.html">联系我们</a></li>
+                </ul>
+                <div class="search">
+                	<div class="ui-widget" id="search_div">产品搜索</div>
+                    <input id="tags" type="text" class="s02" /><span></span>
+                </div>
+            </div>
+        </div>
+	</div>
+
+	<div class="customer">
+    	<div class="news">
+        	<span><a href="javascript:">公司新闻</a></span>
+            <span class="cur"><a href="javascript:">公司理念</a></span>            
+            <ul>
+            	<li><a href="newsdetail.html">2018年1月，美肤堂国际化全新产品在国内上市</a></li>
+                <li><a href="newsdetail.html">2018年1月，美肤堂国内第100家门店正式开幕</a></li>
+                <li><a href="newsdetail.html">2018年1月，美肤堂新品太极丹亮相化妆品博览会</a></li>
+                <li><a href="newsdetail.html">2018年1月，美肤堂携中国文化进入欧洲</a></li>
+            </ul>
+            <ul>
+           	  <p><a href="newsdetail.html">2018年1月</a><a href="company.html">，现代中草药个人护理专家&mdash;&mdash;美肤堂首家体验型专卖店于开封万达广场全新揭幕。店内一系列特有的增值服务和贴心的体验环境，从空间打造到功能布局，完美诠释养美新体验。</a></p>
+            </ul>
+        </div>
+        <div class="product">
+        	<ul>
+            	<li>
+                	<a href="newsdetail.html"><img src="images/004.png"></a>
+                    
+            		<big></big><p><a href="productdetail.html">现代中草药中高档个人护理品01</a></p>
+                </li>
+                <li>
+                	<a href="newsdetail.html"><img src="images/005.png"></a>
+                    
+            		<big></big><p><a href="productdetail.html">现代中草药中高档个人护理品02</a></p>
+                </li>
+                <li>
+                	<a href="newsdetail.html"><img src="images/008.png"></a>
+                    
+            		<big></big><p><a href="productdetail.html">现代中草药中高档个人护理品03</a></p>
+                </li>
+            </ul>
+            <a href="javascript:"><i><span class="curr"><b></b></span><span><b></b></span><span><b></b></span></i></a>
+        </div>
+        <div class="consult">
+        	<span>HOTLINE</span><p>全国免费专线</p><big>400-111-8888</big>
+            <div class="web">
+            	<div class="qq">
+                    <p><a href="#">销售服务</a><a href="#">前台服务</a></p>
+                  <span><a href="#">在线咨询</a><a href="#">在线咨询</a></span><br><br>
+                  <p><a href="#">售后服务</a><a href="#">推广服务</a></p>
+                    <span><a href="#">在线咨询</a><a href="#">在线咨询</a></span>
+                </div>
+                <a href="#" class="two"><img src="images/07.png"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main01">
+    	<h2>
+            <span></span>
+            <div class="right">
+                <b class="curr01"></b><b></b><b></b>
+                <a href="javascript:"><p><i></i></p><p><big></big></p></a>
+            </div>
+        </h2>
+        
+        <div class="goods">
+        	<ul>
+            	<li><a href="#"><img src="images/index01.png" /><p>太极系列</p></a></li>
+                <li><a href="#"><img src="images/index02.png" /><p>太极系列</p></a></li>
+                <li><a href="#"><img src="images/index03.png" /><p>太极系列</p></a></li>
+                <li><a href="#"><img src="images/index01.png" /><p>太极系列</p></a></li>
+                <li><a href="#"><img src="images/index02.png" /><p>太极系列</p></a></li>
+                <li><a href="#"><img src="images/index03.png" /><p>太极系列</p></a></li>
+                <li><a href="#"><img src="images/index01.png" /><p>太极系列</p></a></li>
+                <li><a href="#"><img src="images/index02.png" /><p>太极系列</p></a></li>
+                <li><a href="#"><img src="images/index03.png" /><p>太极系列</p></a></li>
+                <li><a href="#"><img src="images/index01.png" /><p>太极系列</p></a></li>
+            </ul>
+            <ul>
+            	<li><a href="#"><img src="images/index04.png" /><p>美肤系列</p></a></li>
+                <li><a href="#"><img src="images/index05.png" /><p>美肤系列</p></a></li>
+                <li><a href="#"><img src="images/index06.png" /><p>美肤系列</p></a></li>
+                <li><a href="#"><img src="images/index04.png" /><p>美肤系列</p></a></li>
+                <li><a href="#"><img src="images/index05.png" /><p>美肤系列</p></a></li>
+                <li><a href="#"><img src="images/index06.png" /><p>美肤系列</p></a></li>
+                <li><a href="#"><img src="images/index04.png" /><p>美肤系列</p></a></li>
+                <li><a href="#"><img src="images/index05.png" /><p>美肤系列</p></a></li>
+                <li><a href="#"><img src="images/index06.png" /><p>美肤系列</p></a></li>
+                <li><a href="#"><img src="images/index04.png" /><p>美肤系列</p></a></li>
+            </ul>
+            <ul>
+            	<li><a href="#"><img src="images/index07.png" /><p>滋养系列</p></a></li>
+                <li><a href="#"><img src="images/index05.png" /><p>滋养系列</p></a></li>
+                <li><a href="#"><img src="images/index03.png" /><p>滋养系列</p></a></li>
+                <li><a href="#"><img src="images/index07.png" /><p>滋养系列</p></a></li>
+                <li><a href="#"><img src="images/index05.png" /><p>滋养系列</p></a></li>
+                <li><a href="#"><img src="images/index03.png" /><p>滋养系列</p></a></li>
+                <li><a href="#"><img src="images/index07.png" /><p>滋养系列</p></a></li>
+                <li><a href="#"><img src="images/index05.png" /><p>滋养系列</p></a></li>
+                <li><a href="#"><img src="images/index03.png" /><p>滋养系列</p></a></li>
+                <li><a href="#"><img src="images/index01.png" /><p>滋养系列</p></a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="main02">
+    	<h2>
+        	<span></span>
+            <!--<div class="right">
+                <b></b><b></b><b class="curr01"></b>
+                <p class="curr02"></p><p></p>
+            </div>-->
+        </h2>
+        <div class="company01"><span>中国时尚，引领全球</span>
+        <p>美肤堂化妆品有限公司，是开封家化联合股份有限公司的全资子公司，拥有近8000万的固定注册资产。2018年1月，
+美肤堂作为全新概念的现代中草药中高档个人护理品品牌被推向市场，并以其独树一帜的定位，很快在国内化妆品市场崛起，在消费者心中树立起自然、清新、健康良好的品牌形象。</p><a href="#">更多</a></div>
+        <div class="company02">
+        	<img src="images/002.jpg">
+            <p>公司总部</p><span>开封市经济技术开发区第一大街12号</span>
+        </div>
+        <div class="company03">
+        	<img src="images/003.jpg">
+            <p>首家海外连锁店</p>
+            <span>首家海外连锁店在法国巴黎的香榭里大道15号隆重开业。</span>
+        </div>
+    </div>
+    
+    <div class="bottom">
+    	<div class="bb">
+                <ul>
+                	<li><a href="index.html">首页</a></li>
+                    <li><span></span><a href="news.html">公司新闻</a></li>
+                    <li><span></span><a href="product.html">产品中心</a></li>
+                    <li><span></span><a href="company.html">公司理念</a></li>
+                    <li><span></span><a href="contact.html">联系我们</a></li>
+                </ul>
+        </div>
+        <p>Copyright &copy; 美肤堂化妆品有限公司 ICP备11118888</p>
+    </div>
+</body>
+<script src="js/index.js"></script>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <title>自定义对象-原始方式</title>
+  </head>
+  <body>
+	<script type="text/javascript">
+		var goods=new Object();
+		goods.name="美白日霜";
+		goods.type="美白系列化妆品";
+		goods.price="120";
+		goods.color="绿色";
+		goods.showInfo=function(){
+			document.write("商品名称："+goods.name+" | 商品类型："+goods.type+" | 商品价格："+goods.price+" | 商品颜色："+goods.color+"<br>");
+		}
+		goods.showColor=showColor;
+		function showColor(){
+			document.write("商品颜色："+goods.color);	
+		}
+		goods.showInfo();
+		goods.showColor();
+	</script> 
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

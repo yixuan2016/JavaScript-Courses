@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<title>滑动效果示例</title>
+<style type="text/css"> 
+div.panel{
+margin:0px;
+padding:5px;
+background:#e5eecc;
+border:solid 1px #c3c3c3;
+text-indent:2em;
+height:160px;
+display:none;					/*初始状态隐藏div中的内容*/
+}
+</style>
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script type="text/javascript"> 
+$(document).ready(function(){
+  $("#btnSlideDown").click(function(){
+    $(".panel").slideDown("slow");		//向下展开
+  });
+  $("#btnSlideUp").click(function(){
+    $(".panel").slideUp("slow");		//向上收缩
+  });
+  $("#btnSlideUpDown").click(function(){
+    $(".panel").slideToggle("slow");		//交替伸缩
+  });
+});
+</script>
+</head>
+<body>
+<div class="panel">
+<p>美肤堂公司简介</p>
+<p>美肤堂化妆品有限公司，是开封家化联合股份有限公司的全资子公司，拥有近8000万的固定注册资产。2018年1月， 美肤堂作为全新概念的现代中草药中高档个人护理品品牌被推向市场，并以其独树一帜的定位，很快在国内化妆品市场崛起，在消费者心中树立起自然、清新、健康良好的品牌形象。</p>
+</div>
+<p align="center">
+  <button id="btnSlideDown">向下展开</button>
+  <button id="btnSlideUp">向上收缩</button>
+  <button id="btnSlideUpDown">交替伸缩</button>
+</p>
+</body>
+</html>
+

@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<title>输出对象的所有属性</title>
+</head>
+
+<body>
+<script type="text/javascript">
+function Book(name,type,price,publishing){
+	this.name = name;			//对象的name属性
+	this.type = type;				//对象的type属性
+	this.price = price;			//对象的price属性
+	this.publishing = publishing;			//对象的publishing属性
+}
+var book=new Book("网页设计与制作","Web技术",38,"机械工业出版社");
+for(var i in book){									//应用for...in循环语句
+	document.write ("属性名："+i+"，属性值："+book[i]+"<br>");	//输出各属性名及属性值
+}
+</script>
+</body>
+</html>
+

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<script language="JavaScript">
+function showelements(theForm) {
+   str = "窗体 " + theForm.name + " 的元素包括：\n ";
+   for (i = 0; i < theForm.length; i++) 
+      str += theForm.elements[i].name + "\n";
+   alert(str);
+}
+</script>
+</head>
+<body>
+<form name="myform">
+  窗体名称：<input type="text" name="text1">
+  <p>
+  <input name="button1" type="button" value="显示窗体名称"
+     onclick="this.form.text1.value=this.form.name">
+  <input name="button2" type="button" value="显示窗体元素"
+     onclick="showelements(this.form)">
+</form>
+</body>
+</html>
+
+

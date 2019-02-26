@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<title>高度可变的留言区</title>
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<style>
+.message{
+	width:350px;
+	font-size:12px;
+	border:1px solid #000000;
+}
+.tt{
+	padding:5px;
+}
+.msg_top{
+	margin-top:5px;
+}
+#bigBtn{
+	margin-left:180px;
+	font-size:12px;
+}
+#smallBtn{
+	margin-left:5px;
+	font-size:12px;
+}
+#content{
+	overflow:hidden;
+}
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var $content = $("#content");   // 获取文本域对象
+		$("#bigBtn").click(function(){  // 放大按钮单击事件
+			if(!$content.is(":animated")){    // 是否处于动画中
+				if($content.height() < 210){
+					// 将文本域高度在原来的基础上增加70
+					$content.animate({height:"+=70"},500);
+				}
+			}
+		})
+		$("#smallBtn").click(function(){ // 缩小按钮单击事件
+		if(!$content.is(":animated")){   // 是否处于动画中
+			if($content.height() > 70){
+				// 将文本域高度在原来的基础上减少70
+				$content.animate({height:"-=70"},500);
+			}
+		}
+		})
+	})
+</script>
+</head>
+<body>
+<h3>高度可变的留言区</h3>
+<div class="message">
+	<div class="msg_top">
+		<input type="button" value="放大" id="bigBtn"/>&nbsp;&nbsp;<input type="button" value="缩小" id="smallBtn"/>
+	</div>
+	<div class="tt">
+		<textarea id="content" rows="4" cols="45">美肤堂化妆品有限公司，是开封家化联合股份有限公司的全资子公司，拥有近8000万的固定注册资产。美肤堂以其独树一帜的定位，在消费者心中树立起自然、清新、健康良好的品牌形象。
+		</textarea>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<script language="JavaScript">
+  function c1(form){ 
+  myform.results.value=eval(myform.entry.value);
+  // 得到文本框的值：表单名.文本框名.value
+  }
+</script>
+</head>
+<body>
+<form name="myform" method="post">
+  请输入一个算式
+  <input type="text" name="entry" value="1+2*3-4"><p>
+  <input type="button" value="计算" onClick="c1(this.form);">
+  结果为
+  <input type="text" name="results" onFocus="this.blur();"><p>
+</form>
+</body>
+</html>
+
+

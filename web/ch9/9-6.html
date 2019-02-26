@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<title>操作元素的值</title>
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+</head>
+  <body>
+    <h3>请输入网站宣传语</h3>
+    <input type="text" value="" id="inputDiscuss" size="50"/><br/>
+    <input type="button" value="提交" onClick="submitNewsDiscuss()"/>
+    <hr/>
+    <div id="newsDiscuss">
+    </div>
+	<script type="text/javascript">
+		function submitNewsDiscuss(){
+			var inputDiscuss=$("#inputDiscuss").val();
+			$("#newsDiscuss").html("宣传语："+inputDiscuss);
+		}
+	</script>
+  </body>
+</html>

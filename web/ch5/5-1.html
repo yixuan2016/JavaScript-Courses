@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<title>颜色变幻的欢迎词</title> 
+<body onLoad="loadText()"> 
+<Script language="JavaScript"> 
+var someText = "美肤堂欢迎您，请多多指教！"; 
+var aChar; 
+var aSentence; 
+var i=0; 
+var colors = new Array("FF0000","FFFF66","FF3399","00FFFF","FF9900","00FF00"); 
+var aColor; 
+
+function loadText() 
+{ 
+    aColor = colors[Math.floor(Math.random()*colors.length)]; 
+    aChar = someText.charAt(i); 
+    if (i == 0) 
+        aSentence = aChar; 
+    else 
+        aSentence += aChar;     
+    if (i < 50)    i++; 
+    if (document.all) 
+    { 
+        textDiv.innerHTML= "<font color='#"+aColor+"' face='Tahoma' size='7'><i>"+aSentence+"</i>"; 
+        setTimeout("loadText()",100); 
+    } 
+    else if (document.layers) 
+    { 
+        document.textDiv.document.write("<font color='#"+aColor+"' face='Tahoma'                                 size='5'><i>"+aSentence+"</i>"); 
+        document.textDiv.document.close(); 
+        setTimeout("loadText()",100); 
+    } 
+    else if (document.getElementById) 
+    { 
+        document.getElementById("textDiv").innerHTML = "<font color='#"+aColor+"'             face='Tahoma'size='5'><i>"+aSentence+"</i>"; 
+        setTimeout("loadText()",100); 
+    } 
+} 
+</SCRIPT> 
+<div id="textDiv"></div> 
+</body>

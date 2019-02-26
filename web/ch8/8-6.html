@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>简单过滤器设置表格样式</title>
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+</head>
+<body>
+	<div>
+        <table>
+            <tr><td>商品名</td><td>商品价格</td><td>商品数量</td></tr>
+            <tr><td>美白滋养霜</td><td>120</td><td>100</td></tr>
+            <tr><td>美白润体乳</td><td>80</td><td>60</td></tr>
+            <tr><td>美白面膜</td><td>68</td><td>40</td></tr>
+            <tr><td>美白柔肤水</td><td>100</td><td>200</td></tr>
+            <tr><td>美白日霜</td><td>60</td><td>300</td></tr>
+            <tr><td>美白眼膜</td><td>98</td><td>100</td></tr>
+            <tr><td colspan="3">共计6种商品</td></tr>
+        </table>
+    </div>
+	<script type="text/javascript">
+		$(function(e){
+			$("table tr:first").css("background-color","yellow");//表格首行黄色背景
+			$("table tr:last").css("text-align","right");		//表格尾行文本右对齐
+			$("table tr:eq(4)").css("color","red");		//索引值为4的行的文字颜色为红色
+			$("table tr:lt(1)").css("font-weight","bold");	//表格首行文字加粗
+			$("table tr:odd").css("background-color","#ddd");//索引值为奇数行的背景为浅灰色
+			$(":root").css("background-color","ivry");	//网页乳白色背景
+			$("table tr:not(:first)").css("font-size","13pt");	//表格除首行外的字体大小13pt
+		});
+	</script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<title>事件冒泡</title>
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<style type="text/css">
+#grandfather{
+ border:1px solid #0066FF;
+ cellpadding:0px;
+ cellspacing:0px;
+}
+#grandfather td{
+ border: 1px solid #0066FF;
+}
+</style>
+<script type="text/javascript">
+function trclick(){
+ alert("父亲的onclick事件触发");
+}
+function tableclick(){
+ alert("祖父的onclick事件触发");
+}
+window.onload=function(){
+ var grandfather=document.getElementById("grandfather");
+ var father=document.getElementById("father");
+ var noStop=document.getElementById("noStop");
+ var haveStop=document.getElementById("haveStop");
+  
+ grandfather.onclick=tableclick;
+ father.onclick=trclick;
+  
+ noStop.onclick=function(){
+ alert("没有阻止冒泡的子元素");
+ }
+ haveStop.onclick=function(evt){
+  alert("阻止冒泡的子元素");
+  evt.stopPropagation();
+ }
+}
+</script>
+</head>
+<body>
+<table width="280" id="grandfather">
+ <tr >
+ <td width="140" height=20"></td>
+ <td width="140" height=20"></td>
+ </tr>
+ <tr id="father">
+ <td id="noStop" height=20">没有阻止事件冒泡</td>
+ <td id="haveStop" height=20">阻止了事件冒泡</td>
+ </tr>
+ <tr>
+ <td height=20"> </td>
+ <td height=20"> </td>
+ </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<title>replaceWith()和replaceAll()替换方法</title>
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#btnRplWith").click(function () {
+       $("p").replaceWith( "<div>" + "欢迎您！"+ "</div>"  );	//将所有p元素替换成div元素
+    });
+    $("#btnRplAll").click(function () {
+       $("<b>我是图像 </b>").replaceAll( "img" );		//将所有img元素替换成加粗的文字
+    });
+  });
+</script>
+<style>
+  div{height:20px;border:1px solid blue;}
+</style>
+</head>
+<body>
+  <p>美肤堂</p>
+  <p>蒸蒸日上</p>
+  <p>再创辉煌</p>
+  <img src="images/01.jpg"> <img src="images/02.jpg">
+  <hr/>
+  <input type="button" id="btnRplWith" value="replaceWith替换" />
+  <input type="button" id="btnRplAll" value="replaceAll替换" />
+</body>
+</html>

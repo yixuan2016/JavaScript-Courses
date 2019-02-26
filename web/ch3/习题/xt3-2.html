@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>实时走动的数字时钟</title>
+</head>
+<script>
+function tick() {
+var hours, minutes, seconds, xfile;
+var intHours, intMinutes, intSeconds;
+var today;
+today = new Date();
+intHours = today.getHours();
+intMinutes = today.getMinutes();
+intSeconds = today.getSeconds();
+if (intHours == 0) {
+hours = "00:";
+} else if (intHours < 24) { 
+hours = intHours+":";
+} else if (intHours == 24) {
+hours = "12:";
+} 
+if (intMinutes < 10) 
+{
+minutes = "0"+intMinutes+":";
+} else {
+minutes = intMinutes+":";
+}
+if (intSeconds < 10) 
+{
+seconds = "0"+intSeconds+" ";
+} 
+else 
+{
+seconds = intSeconds+" ";
+} 
+timeString = hours+minutes+seconds;
+Clock.innerHTML = timeString;
+window.setTimeout("tick();", 100);
+}
+window.onload = tick;
+</script>
+<body>
+<h1 align="center">时钟提醒</h1>
+<div id="Clock" align="center" style="font-size:80px; color:#000000"></div>
+</body>
+</html>
+

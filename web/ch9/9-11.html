@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<title>删除与恢复节点</title>
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    var $p_3;
+    $("#btnDelete").click(function () {
+       $p_3=$("div p:eq(2)").detach();	//删除第3行文字，绑定的事件或附加的数据都会保留下来
+    });
+    $("#btnRestore").click(function () {
+       $p_3.appendTo("div");			//重新追加元素p_3，恢复被删除的第3行文字
+    });
+  });
+</script>
+</head>
+<body>
+  <div>
+    <p>美肤堂</p>
+    <p>蒸蒸日上</p>
+    <p>再创辉煌</p>
+  </div>
+  <input type="button" id="btnDelete" value="删除第3行文字" />
+  <input type="button" id="btnRestore" value="恢复第3行文字" />
+</body>
+</html>

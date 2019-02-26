@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<title>使用Form对象实现Web页面信息交互</title>
+<script>
+function check(){
+if (window.document.form1.name1.value.length==0&&window.document.form1.agree.checked==false)
+  alert("姓名不能为空且必须接受协议!");
+  return true;
+}
+function set() {
+if (confirm("真的清除吗?")) 		//在弹出的确认框中如果用户选择“确定”
+  return true; 					//函数返回真
+else
+  return false;
+}
+</script>
+</head>
+<body>
+  <form name="form1" action="" method="post" onsubmit="check()" onreset="set()">
+    请输入姓名 <input type="text" name="name1" size="16"><br>
+    接受商城协议 <input type="checkbox" name="agree"><br>
+    <input type="submit" value="提交">
+    <input type="reset" value="复位">
+  </from>
+</body>
+</html>
+
+

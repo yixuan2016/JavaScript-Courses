@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<title>welcome</title>
+<script language="JavaScript">
+  function chk()
+  { var th=window.reform.username.value;
+    if(th=="")
+    { alert("账号不能为空!"); }
+  }
+</script>
+</head>
+<body>
+<h3>美肤堂用户登录</h3>
+<form name="reform" method="post">
+  <p>输入账号：<input type="text" name="username" size="10" onBlur="chk()"></p>
+  <p>输入密码：<input type="text" name="pass" size="10"></p>
+</form>
+</body>
+</html>
+

@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<title>使用jQuery模拟悬停事件</title>
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery-migrate-1.2.1.js"> </script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#pic").toggle(function(){
+        $(this).attr("width",214);//设置图片宽度
+	$(this).attr("height",246);//设置图片高度
+    },function(){
+		$(this).attr("width",107);//设置图片宽度
+		$(this).attr("height",123);//设置图片高度
+	});
+});
+</script>
+</head>
+
+<body>
+<img id="pic" src="images/02.jpg" />
+</body>
+</html>

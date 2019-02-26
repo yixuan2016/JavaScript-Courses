@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+<title>preventDefault()方法阻止默认事件动作</title>
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("a").click(function(event){
+    event.preventDefault();
+  });
+});
+</script>
+</head>
+<body>
+<a href="http://www.mft.com/">美肤堂</a>
+</body>
+</html>
+
